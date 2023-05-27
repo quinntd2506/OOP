@@ -1,0 +1,7 @@
+               Lab 01: Environment Setup and Java Basics
+Full Name: Trịnh Diễm Quỳnh
+Student ID: 20210737
+
+Questions:
+- What happens if users choose “Cancel”?
+Output: "You've chosen: No"

@@ -1,6 +1,6 @@
 package aims.store;
 
-import aims.disc.DigitalVideoDisc;
+import aims.media.DigitalVideoDisc;
 
 
 public class Store {

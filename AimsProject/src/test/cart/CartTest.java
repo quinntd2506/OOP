@@ -1,7 +1,7 @@
 package test.cart;
 
-import aims.disc.DigitalVideoDisc;
 import aims.cart.Cart;
+import aims.media.DigitalVideoDisc;
 
 public class CartTest {
 

@@ -1,12 +1,10 @@
-package aims.disc;
+package aims.media;
 
 public class DigitalVideoDisc {
-    private String title;
-    private String category;
+
     private String director;
     private int length;
-    private float cost;
-    private int id;
+   
 
     private static int nbDigitalVideoDiscs = 0;
 
@@ -49,18 +47,7 @@ public class DigitalVideoDisc {
         this.length = length;
     }
 
-    public String getTitle() {
-        return this.title;
-    }
 
-    public String setTitle(String title){
-        this.title = title;
-        return this.title;
-    }
-
-    public String getCategory() {
-        return this.category;
-    }
 
     public String getDirector() {
         return this.director;
@@ -68,10 +55,6 @@ public class DigitalVideoDisc {
 
     public int getLength() {
         return this.length;
-    }
-
-    public float getCost() {
-        return this.cost;
     }
 
     public boolean isMatch(String title){

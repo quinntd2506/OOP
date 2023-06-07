@@ -1,6 +1,6 @@
 package test.disc;
 
-import aims.disc.DigitalVideoDisc;
+import aims.media.DigitalVideoDisc;
 
 
 public class TestPassingParameter {

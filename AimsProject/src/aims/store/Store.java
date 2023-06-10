@@ -1,45 +1,48 @@
 package aims.store;
 
-import aims.media.DigitalVideoDisc;
+import java.util.ArrayList;
+import java.util.List;
+
+import aims.media.Media;
 
 
 public class Store {
-    public static final int MAX_NUMBERS_STORE = 1000000;
-    private DigitalVideoDisc itemsInStore[] = new DigitalVideoDisc[MAX_NUMBERS_STORE];
-
-    int qtyStore = 0;
-
-    public int getqtyStore(){
-        return this.qtyStore;
-    }
-
-    public void addDVD(DigitalVideoDisc dvd) {
-        if (qtyStore == MAX_NUMBERS_STORE) {
-            System.out.println("The store is almost full");
-        }
-        itemsInStore[qtyStore] = dvd;
-        qtyStore++;
-        System.out.println("The disc has been added to the store");
-    }
-
-    public void removeDVD(DigitalVideoDisc dvd) {
-        int index = -1;
-
-        for (int i = 0; i<qtyStore; i++) {
-            if (itemsInStore[i] == dvd) index = 1;
-        }
-
-        if (index == 1) {
-            qtyStore--;
-            for (int i = index; i<qtyStore; i++) {
-                itemsInStore[i] = itemsInStore[i+1];
-            }
-            System.out.println("The disc has been removed in the store");
-        }
-        else {
-            System.out.println("The disc doesn't exist.");
-        }
-
-    }
-
+	private List<Media> itemsInStore = new ArrayList<Media>();
+	
+	public void addMedia(Media medium) {
+		this.itemsInStore.add(medium);
+		System.out.println("Item added.");
+	}
+	
+	public String removeMedia(Media medium) {
+		String warning = "";
+		if (this.itemsInStore.remove(medium)) {
+			System.out.println("Item removed.");
+		} else {
+			warning = "Item doesn't exist.";
+			System.out.println(warning);
+		}
+		return warning;
+	}
+	
+	public void print() {
+		System.out.print("[");
+		int lastindex = this.itemsInStore.size() - 1;
+		for (int i = 0; i <= lastindex; i++) {
+			System.out.print(this.itemsInStore.get(i).getTitle() + (i == lastindex ? "" : ", "));
+		}
+		System.out.println("]");
+	}
+	
+	public Media searchByTitle(String title) { // Return one only
+		Media medium;
+		for (int i = 0; i < this.itemsInStore.size(); i++) {
+			medium = this.itemsInStore.get(i);
+			if (medium.isMatch(title)) {
+				return medium;
+			}
+		}
+		
+		return null;
+	}
 }

@@ -1,0 +1,24 @@
+9.	Constructors of whole classes and parent classes
+● Which classes are aggregates of other classes? Checking all constructors of whole classes if they initialize for their parts?
+- The Media class aggregate Book & Disc. The Disc class aggregate CompactDisc and DigitalVideoDisc.
+
+10.	Unique item in a list
+● If the passing object is not an instance of Media, what happens?
+- It will be considered different from the original object (using instanceof).
+
+11.	Polymorphism with toString() method
+● Iterate through the list and print out the information of the media by using toString() method. Observe what happens and explain in detail.
+- Different types of Media (Book, DVD, Track) behaves differently, prints out their own details according to their own format.
+
+12.	Sort media in the cart
+● What class should implement the Comparable interface?
+- Media class and/or its subclasses.
+
+● In those classes, how should you implement the compareTo()method be to reflect the ordering that we want?
+- (Implemented in Media.java).
+
+● Can we have two ordering rules of the item (by title then cost and by cost then title) if we use this Comparable interface approach?
+- No because there should only be one natural ordering when comparing object with Comparable interface.
+
+● Suppose the DVDs has a different ordering rule from the other media types, that is by title, then decreasing length, then cost. How would you modify your code to allow this?
+- To accommodate the different ordering rule for DVDs (title, decreasing length, cost), override the compareTo() method in DVD class. (code in DigitalVideoDisc.java)

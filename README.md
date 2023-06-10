@@ -1,3 +1,3 @@
 # OOP
-The "answers.txt" files are in the respective lab (ex: lab1, lab2..) folders.
+The "answers.txt" files are in the respective lab (ex: lab1, lab2..) folders under the Others folder.
 

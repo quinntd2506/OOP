@@ -11,5 +11,6 @@
         "/Users/trinhdiemquynh/Documents/javafx-sdk-20.0.1/lib/javafx.web.jar",
         "/Users/trinhdiemquynh/Documents/javafx-sdk-20.0.1/lib/javafx.swing.jar",
         "/Users/trinhdiemquynh/Documents/javafx-sdk-20.0.1/lib/javafx.media.jar"
-    ]
+    ],
+    "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx2G -Xms100m -Xlog:disable"
 }

@@ -2,6 +2,8 @@ package aims.media;
 
 import java.util.Comparator;
 
+import aims.exception.PlayerException;
+
 public abstract class Media implements Comparable<Media> {
 	@Override
 	public int compareTo(Media o2) {
@@ -95,11 +97,14 @@ public abstract class Media implements Comparable<Media> {
 		this.cost = cost;
 	}
 
-	public void playMedia() {
+	public String playMedia() throws PlayerException {
+		String playContent = "";
 		if (this instanceof Playable) {
 			((Playable) this).play();
+			playContent = ((Playable) this).getPlayContent();
 		} else {
 			System.out.println("Playable media not found. Please try again.");
 		}
+		return playContent;
 	}
 }

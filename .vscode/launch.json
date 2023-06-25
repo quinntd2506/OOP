@@ -1,0 +1,97 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Painter",
+            "request": "launch",
+            "vmArgs": "--module-path /Users/trinhdiemquynh/Documents/javafx-sdk-20.0.1/lib --add-modules javafx.controls,javafx.fxml,javafx.swing",
+            "mainClass": "javafx.Painter",
+            "projectName": "OOP-LAB_66aa0b2d"
+        },
+        {
+            "type": "java",
+            "name": "NumberGrid",
+            "request": "launch",
+            "mainClass": "swing.NumberGrid",
+            "projectName": "OOP-LAB_66aa0b2d"
+        },
+        {
+            "type": "java",
+            "name": "AimsSwingJavaFx",
+            "request": "launch",
+            "vmArgs": "--module-path /Users/trinhdiemquynh/Documents/javafx-sdk-20.0.1/lib --add-modules javafx.controls,javafx.fxml,javafx.swing",
+            "mainClass": "aims.AimsSwingJavaFx",
+            "projectName": "OOP-LAB_66aa0b2d"
+        },
+        {
+            "type": "java",
+            "name": "CartScreen",
+            "request": "launch",
+            "vmArgs": "--module-path /Users/trinhdiemquynh/Documents/javafx-sdk-20.0.1/lib --add-modules javafx.controls,javafx.fxml,javafx.swing",
+            "mainClass": "aims.screen.CartScreen",
+            "projectName": "OOP-LAB_66aa0b2d"
+        },
+        {
+            "type": "java",
+            "name": "StoreScreen",
+            "request": "launch",
+            "vmArgs": "--module-path /Users/trinhdiemquynh/Documents/javafx-sdk-20.0.1/lib --add-modules javafx.controls,javafx.fxml,javafx.swing",
+            "mainClass": "aims.screen.StoreScreen",
+            "projectName": "OOP-LAB_66aa0b2d"
+        },
+        {
+            "type": "java",
+            "name": "AWTAccumulator",
+            "request": "launch",
+            "mainClass": "swing.AWTAccumulator",
+            "projectName": "OOP-LAB_66aa0b2d"
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "vmArgs": "--module-path /Users/trinhdiemquynh/Documents/javafx-sdk-20.0.1/lib --add-modules javafx.controls,javafx.fxml,javafx.swing",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Aims",
+            "request": "launch",
+            "vmArgs": "--module-path /Users/trinhdiemquynh/Documents/javafx-sdk-20.0.1/lib --add-modules javafx.controls,javafx.fxml,javafx.swing",
+            "mainClass": "aims.Aims",
+            "projectName": "OOP-LAB_66aa0b2d"
+        },
+        {
+            "type": "java",
+            "name": "CartTestMediaComparator",
+            "request": "launch",
+            "mainClass": "test.cart.CartTestMediaComparator",
+            "projectName": "OOP-LAB_66aa0b2d"
+        },
+        {
+            "type": "java",
+            "name": "CartTestSearch",
+            "request": "launch",
+            "mainClass": "test.cart.CartTestSearch",
+            "projectName": "OOP-LAB_66aa0b2d"
+        },
+        {
+            "type": "java",
+            "name": "TestPassingParameter",
+            "request": "launch",
+            "mainClass": "test.disc.TestPassingParameter",
+            "projectName": "OOP-LAB_66aa0b2d"
+        },
+        {
+            "type": "java",
+            "name": "StoreTest",
+            "request": "launch",
+            "mainClass": "test.store.StoreTest",
+            "projectName": "OOP-LAB_66aa0b2d"
+        }
+    ]
+}

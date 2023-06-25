@@ -45,4 +45,8 @@ public class Store {
 		
 		return null;
 	}
+
+    public List<Media> getItemsInStore() {
+	return itemsInStore;
+    }
 }

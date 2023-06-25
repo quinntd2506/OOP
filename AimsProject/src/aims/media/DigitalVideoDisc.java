@@ -1,5 +1,7 @@
 package aims.media;
 
+import aims.exception.PlayerException;
+
 public class DigitalVideoDisc extends Disc implements Playable{
 
    
@@ -33,7 +35,8 @@ public class DigitalVideoDisc extends Disc implements Playable{
 		// TODO Auto-generated constructor stub
 	}
    
-    public boolean isMatch(String keywords) {
+    @Override
+	public boolean isMatch(String keywords) {
 		// Split the keywords into an array of individual words
 		String[] words = keywords.toLowerCase().split("\\s+");
 		
@@ -48,13 +51,23 @@ public class DigitalVideoDisc extends Disc implements Playable{
 		return false;
 	}
 
+	@Override
     public String toString(){
         return getTitle() + " - " + getCategory() + " - " + getDirector() + " - " + getLength() + ": " + getCost() + "$";
     }
 
-    public void play() {
-		System.out.println("Playing DVD: " + this.getTitle());
-		System.out.println("DVD length: " + this.getLength());
+
+	public String getPlayContent() {
+		return "Playing DVD: " + this.getTitle() + "\nDVD length: " + this.getLength(); 
+	}
+
+    @Override
+	public void play() throws PlayerException {
+		if (this.getLength() > 0) {
+			System.out.println(this.getPlayContent());
+		} else {
+			throw new PlayerException("ERROR: DVD length is non-positive");
+		}
 	}
 
     @Override

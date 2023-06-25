@@ -1,5 +1,7 @@
 package aims.media;
 
+import aims.exception.PlayerException;
+
 public class Track implements Playable {
 	private String title;
 	private int length;
@@ -15,11 +17,22 @@ public class Track implements Playable {
 		return ((Track)obj).getTitle() == this.getTitle() && 
 				((Track)obj).getLength() == this.getLength();
 	}
-		
-	public void play() {
-		System.out.println("Playing Track: " + this.getTitle());
-		System.out.println("Track length: " + this.getLength());
+
+	@Override
+	public String getPlayContent() {
+		// TODO Auto-generated method stub
+		return "Playing Track: " + this.getTitle() + "\nTrack length: " + this.getLength();
 	}
+		
+	@Override
+	public void play() throws PlayerException {
+		if (this.getLength() > 0) {
+			System.out.println(this.getPlayContent());
+		} else {
+			throw new PlayerException("ERROR: Track " + this.getTitle() + " length is non-positive");
+		}
+	}
+
 	
 	public String getTitle() {
 		return title;

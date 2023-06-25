@@ -4,6 +4,7 @@ package aims;
 import java.util.Scanner;
 
 import aims.cart.Cart;
+import aims.exception.PlayerException;
 import aims.media.*;
 import aims.store.Store;
 
@@ -103,7 +104,13 @@ public class Aims {
 				
 				break;
 			case 3:
-				media.playMedia();
+				try {
+					media.playMedia();
+				} catch (PlayerException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+					
 				break;
 			case 4:
 				cartMenu();
@@ -142,8 +149,14 @@ public class Aims {
 				storeMenu();
 				break;
 			case 2:
-				media.playMedia();
-				mediaDetailsMenu(media);
+				cart.addMedia(media);
+				if (media instanceof DigitalVideoDisc) {
+					int dvdCount = cart.getDVDCount();
+					System.out.println("DVD added to cart. Total DVDs in cart: " + dvdCount);
+				} else {
+					System.out.println("Media added to cart.");
+				}
+
 				break;
 			default:
 				System.out.println("Invalid choice. Please try again.");
@@ -200,7 +213,7 @@ public class Aims {
 				cart.removeMedia(media);
 				break;
 			case 4:
-				media.playMedia();
+				cartMenu();
 				break;
 			case 5:
 				placeOrder();

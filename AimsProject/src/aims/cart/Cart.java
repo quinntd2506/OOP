@@ -1,18 +1,23 @@
 package aims.cart;
 
-import java.util.ArrayList;
+import java.text.DecimalFormat;
 import java.util.Collections;
 
 import aims.media.DigitalVideoDisc;
 import aims.media.Media;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 
 
 public class Cart {
     public static final int MAX_NUMBERS_ORDERED = 20;
-    private ArrayList<Media> itemsOrdered = new ArrayList<Media>();
+    private ObservableList<Media> itemsOrdered = FXCollections.observableArrayList();
+	public ObservableList<Media> getItemsOrdered() {
+		return itemsOrdered;
+	}
 
     public void clear() {
-		this.itemsOrdered = new ArrayList<Media>();
+		this.itemsOrdered.clear();
 	}
 	
 	public String addMedia (Media medium) {
@@ -81,6 +86,11 @@ public class Cart {
 		}
 		
 		return total;
+	}
+
+	public String totalCostText() {
+		DecimalFormat decimalFormat = new DecimalFormat("#.##");
+		return decimalFormat.format(this.totalCost());
 	}
 	
 	public void print() {
